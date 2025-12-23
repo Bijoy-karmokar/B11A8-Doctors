@@ -44,7 +44,7 @@ const Footer = () => {
           ContactUs
         </NavLink>
       </nav>
-        <p className="border-1 w-3/4"/>
+        <p className="border-1 w-3/5"/>
       <nav>
         <div className="grid grid-flow-col gap-4">
           <Link target="_blank" to="https://facebook.com">
