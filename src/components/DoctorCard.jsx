@@ -1,8 +1,10 @@
 import React from "react";
+import { Link } from "react-router";
 
 const DoctorCard = ({ doctor }) => {
   //   console.log(doctor);
   const {
+    id,
     name,
     image,
     education,
@@ -41,7 +43,8 @@ const DoctorCard = ({ doctor }) => {
         <p className="font-medium">Time:{timings}</p>
         <p className="font-medium">Phones:{phone}</p>
       </div>
-      <button
+      <Link to={`/doctor/${id}`}>
+              <button
         className="box-border relative z-30 mt-3 w-full inline-flex items-center justify-center px-8 py-3 overflow-hidden font-bold text-white transition-all duration-300 bg-indigo-600 rounded-md cursor-pointer group ring-offset-2 ring-1 ring-indigo-300 ring-offset-indigo-200 hover:ring-offset-indigo-500 ease focus:outline-none"
       >
         <span className="absolute bottom-0 right-0 w-8 h-20 -mb-8 -mr-5 transition-all duration-300 ease-out transform rotate-45 translate-x-1 bg-white opacity-10 group-hover:translate-x-0"></span>
@@ -50,6 +53,7 @@ const DoctorCard = ({ doctor }) => {
          View Details
         </span>
       </button>
+      </Link>
     </div>
   );
 };
