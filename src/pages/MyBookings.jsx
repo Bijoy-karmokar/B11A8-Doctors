@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useLoaderData } from "react-router";
 import Appoinments from "../components/Appoinments";
 import { deletedDoctors, getDoctors } from "../Utils";
+import DoctorChart from "../components/DoctorChart";
 
 const MyBookings = () => {
   const doctors = useLoaderData();
@@ -18,6 +19,7 @@ const MyBookings = () => {
     }
   return (
     <div>
+      <DoctorChart></DoctorChart>
       <div className="text-center">
         <h2 className="text-xl md:text-2xl lg:text-4xl font-bold">
           My Today Appointments
