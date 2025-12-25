@@ -1,5 +1,6 @@
 import React from "react";
 import { useLoaderData, useParams } from "react-router";
+import BookAppoint from "../components/BookAppoint";
 
 const DoctorDetails = () => {
   const doctors = useLoaderData();
@@ -17,17 +18,16 @@ const DoctorDetails = () => {
     phone,
     speciality,
     consultationFee,
-    timings,
     about,
   } = singleDoctor;
 
   return (
-    <div className="space-y-5">
-      <div className="flex flex-col items-center justify-center space-y-3 p-10">
+    <div className="space-y-5 bg-base-200">
+      <div className="flex flex-col items-center justify-center space-y-3 mt-5 rounded-2xl p-10 bg-base-100 shadow-lg">
         <h3 className="text-3xl md:text-5xl font-bold">Doctors Profile Details</h3>
         <p className="text-lg  text-center text-gray-600">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque rem architecto repudiandae accusantium mollitia eum ipsum cum porro eius nam, libero numquam accusamus. Sequi iure itaque vitae eveniet velit eaque.</p>
       </div>
-      <div className="hero">
+      <div className="hero bg-base-100 shadow-lg rounded-2xl">
         <div className="hero-content flex-col lg:flex-row">
           <img
             src={image}
@@ -50,6 +50,7 @@ const DoctorDetails = () => {
           </div>
         </div>
       </div>
+      <BookAppoint></BookAppoint>
     </div>
   );
 };
