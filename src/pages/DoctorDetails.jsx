@@ -50,7 +50,7 @@ const DoctorDetails = () => {
           </div>
         </div>
       </div>
-      <BookAppoint></BookAppoint>
+      <BookAppoint singleDoctor={singleDoctor}></BookAppoint>
     </div>
   );
 };
